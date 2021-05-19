@@ -1,0 +1,33 @@
+
+.homepage{
+    background: #48BAB2;
+}
+.inputReagister{
+    border:1px solid rgb(184, 182, 182);
+}
+
+.signupTitle{
+    font-size: 20px !important;
+    letter-spacing: 1px;
+    color: #212B27 !important;
+}
+.signupSubtitle{
+    font-size: 15px !important;
+}
+.signupForm{
+    background: #F6FBF9 !important;
+}
+.inputReagister{
+    background: #FFFFFF;
+    border: 1px solid rgba(241, 241, 241, 0.979) !important;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.inputSignup{
+    border-radius: 15px;
+    border:none;
+}
+.btnSignup{
+    background: #01665E;
+    border-radius: 15px;
+}

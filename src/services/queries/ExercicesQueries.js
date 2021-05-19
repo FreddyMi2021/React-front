@@ -1,0 +1,164 @@
+import { gql } from '@apollo/client';
+
+const ALL_EXERCISES = gql`
+    query{
+        allExercises{
+            id
+            instruction
+            solution
+            hint
+            attemptMax
+            durationMax
+            failXp
+            timeXp
+            language
+            category
+            lesson{
+                id
+                title
+                pic
+                content
+                duration
+                price
+            }
+            exerciseCriteriums{
+                id
+                criteria
+                xp
+            }
+            studentXExercises{
+                id
+                duration
+                attemptNb
+                xpExercise
+                student{
+                    id
+                    name
+                    nickname
+                    image
+                    email
+                }
+            }
+            indications{
+                id
+                content
+                instructions{
+                    id
+                    title
+                    paragraph
+                }
+            }
+        }
+    }
+`
+
+
+const PAGINATE_EXERCICES = (page, perPage) => {
+    return gql`
+        query{
+            exercises(page: ${page}, perPage:${perPage} ){
+                id
+                instruction
+                solution
+                hint
+                attemptMax
+                durationMax
+                failXp
+                timeXp
+                language
+                category
+                lesson{
+                    id
+                    title
+                    pic
+                    content
+                    duration
+                    price
+                }
+                exerciseCriteriums{
+                    id
+                    criteria
+                    xp
+                }
+                studentXExercises{
+                    id
+                    duration
+                    attemptNb
+                    xpExercise
+                    student{
+                        id
+                        name
+                        nickname
+                        image
+                        email
+                    }
+                }
+                indications{
+                    id
+                    content
+                    instructions{
+                        id
+                        title
+                        paragraph
+                    }
+                }
+            }
+        }
+    `
+}
+
+const SHOW_EXERCICE = (id) =>{
+    return gql`
+        query{
+            exercise(id:${id} ){
+                id
+                instruction
+                solution
+                hint
+                attemptMax
+                durationMax
+                failXp
+                timeXp
+                language
+                category
+                lesson{
+                    id
+                    title
+                    pic
+                    content
+                    duration
+                    price
+                }
+                exerciseCriteriums{
+                    id
+                    criteria
+                    xp
+                }
+                studentXExercises{
+                    id
+                    duration
+                    attemptNb
+                    xpExercise
+                    student{
+                        id
+                        name
+                        nickname
+                        image
+                        email
+                    }
+                }
+                indications{
+                    id
+                    content
+                    instructions{
+                        id
+                        title
+                        paragraph
+                    }
+                }
+            }
+        }
+    `
+} 
+
+export { ALL_EXERCISES, PAGINATE_EXERCICES, SHOW_EXERCICE }

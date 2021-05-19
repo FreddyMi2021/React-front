@@ -1,0 +1,145 @@
+import { gql } from '@apollo/client';
+
+const ALL_STUDENT_X_COMMENT_X_LESSON_VIDEO = gql`
+    query{
+        allStudentXCommentXLessonVideos{
+            id
+            student{
+                id
+                name
+                nickname
+                image
+                email
+                totalXp
+                totalBadge
+                totalTimePassed
+                totalCodeLine
+            }
+            lessonVideo{
+                id
+                path
+                lesson{
+                    id
+                    title
+                    pic
+                    content
+                    duration
+                    helpXp
+                    price
+                    adminId
+                }
+            }
+            comments{
+                id
+                types
+                content
+                commentVotes{
+                    id
+                    typeVote
+                }
+                commentResponses{
+                    id
+                    content
+                }
+            }
+        }
+    }
+`
+
+const PAGINATE_STUDENT_X_COMMENT_X_LESSON_VIDEOS = (page, perPage) => {
+    return gql`
+        query{
+            studentXCommentXLessonVideos(page: ${page}, perPage: ${perPage}){
+                id
+                student{
+                    id
+                    name
+                    nickname
+                    image
+                    email
+                    totalXp
+                    totalBadge
+                    totalTimePassed
+                    totalCodeLine
+                }
+                lessonVideo{
+                    id
+                    path
+                    lesson{
+                        id
+                        title
+                        pic
+                        content
+                        duration
+                        helpXp
+                        price
+                        adminId
+                    }
+                }
+                comments{
+                    id
+                    types
+                    content
+                    commentVotes{
+                        id
+                        typeVote
+                    }
+                    commentResponses{
+                        id
+                        content
+                    }
+                }
+            }
+        }
+    `
+}
+
+const SHOW_STUDENT_X_COMMENT_X_LESSON_VIDEO = (id) => {
+    return gql`
+        query{
+            studentXCommentXLessonVideo(id: ${id}){
+                id
+                student{
+                    id
+                    name
+                    nickname
+                    image
+                    email
+                    totalXp
+                    totalBadge
+                    totalTimePassed
+                    totalCodeLine
+                }
+                lessonVideo{
+                    id
+                    path
+                    lesson{
+                        id
+                        title
+                        pic
+                        content
+                        duration
+                        helpXp
+                        price
+                        adminId
+                    }
+                }
+                comments{
+                    id
+                    types
+                    content
+                    commentVotes{
+                        id
+                        typeVote
+                    }
+                    commentResponses{
+                        id
+                        content
+                    }
+                }
+            }
+        }
+    `
+}
+
+export {ALL_STUDENT_X_COMMENT_X_LESSON_VIDEO, PAGINATE_STUDENT_X_COMMENT_X_LESSON_VIDEOS, SHOW_STUDENT_X_COMMENT_X_LESSON_VIDEO}

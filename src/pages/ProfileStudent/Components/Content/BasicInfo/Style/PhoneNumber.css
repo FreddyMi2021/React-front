@@ -1,0 +1,56 @@
+
+.react-tel-input .flag-dropdown {
+    width: 3rem !important;
+    background: rgb(241 241 241);
+    border: none !important;
+    border-radius: 0px;
+}
+.react-tel-input .flag-dropdown:hover {
+    background: rgb(241 241 241);
+}
+.react-tel-input .flag-dropdown.open {
+    background: rgb(241 241 241);
+}
+.react-tel-input .form-control {
+    position: relative;
+    font-size: 14px;
+    letter-spacing: .01rem;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-left: 60px !important;
+    margin-left: 0;
+    background: #FFFFFF;
+    border: none !important;
+    border-radius: 0px;
+    line-height: 25px;
+    height: 3rem !important;
+    width: 100% !important;
+    font-weight: 900;
+    outline: none;
+}
+.react-tel-input .selected-flag:hover {
+    background: rgb(241 241 241);
+}
+.react-tel-input .selected-flag:focus {
+    background: rgb(241 241 241);
+}
+input:checked + label {
+    background-color: rgb(11, 148, 96);
+}
+input:checked + .otherLevel {
+    background-color: rgb(11, 148, 96);
+}
+.react-datepicker-wrapper {
+    display: inline-block;
+    padding: 0;
+    border: 0;
+    width: 100% !important;
+}
+input:checked + .icons {
+    display: block;
+}
+input:checked + .competence {
+    background-color: rgb(11, 148, 96);
+    color:#fff;
+}
+

@@ -1,0 +1,11 @@
+.seeMoreSidebar{
+    background: #5DBE94;
+}
+.vertical-center {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    list-style: armenian;
+  }
